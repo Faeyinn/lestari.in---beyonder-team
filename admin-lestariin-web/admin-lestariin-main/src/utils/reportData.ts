@@ -1,0 +1,151 @@
+export interface Report {
+  id: number;
+  image: string;
+  status: string;
+  category: string;
+  tags: string[];
+  location: string;
+  description: string;
+  author: string;
+  date: string;
+  latitude?: number;
+  longitude?: number;
+  acted?: boolean; // optional flag: telah ditindaklanjuti oleh petugas
+}
+
+export const reportsData: Report[] = [
+  {
+    id: 1,
+    image: 'https://images.unsplash.com/photo-1605600659908-0ef719419d41?w=800',
+    status: 'Menunggu Verifikasi',
+    category: 'Sampah',
+    tags: ['Banyak Sampah', 'TPS Terbuka'],
+    location: 'Padang',
+    description: 'Tumpukan sampah menumpuk di pinggir jalan utama, mengganggu arus lalu lintas.',
+    author: 'Iwid Yuai',
+    date: '2025-10-25',
+  },
+  {
+    id: 2,
+    image: 'https://images.unsplash.com/photo-1621451537084-482c73073a0f?w=800',
+    status: 'Menunggu Verifikasi',
+    category: 'Kualitas Air',
+    tags: ['Air Keruh', 'Sungai'],
+    location: 'Padang Pariaman',
+    description: 'Air sungai berubah warna dan mengeluarkan bau, beberapa warga sakit perut.',
+    author: 'Napis Emel',
+    date: '2025-10-24',
+  },
+  {
+    id: 3,
+    image: 'https://images.unsplash.com/photo-1611284446314-60a58ac0deb9?w=800',
+    status: 'Menunggu Verifikasi',
+    category: 'Sampah',
+    tags: ['Sampah Anorganik'],
+    location: 'Lembah Harau',
+    description: 'Sampah plastik berserakan di kawasan wisata, mengurangi kenyamanan pengunjung.',
+    author: 'Bang Padil',
+    date: '2025-10-23',
+  },
+  {
+    id: 4,
+    image: 'https://images.unsplash.com/photo-1530587191325-3db32d826c18?w=800',
+    status: 'Menunggu Verifikasi',
+    category: 'Sampah',
+    tags: ['TPS Ilegal', 'Bau'],
+    location: 'Bukittinggi',
+    description: 'TPS tanpa pengelolaan menyebabkan bau dan lalat menyebar ke pemukiman.',
+    author: 'Pajar',
+    date: '2025-10-22',
+  },
+  {
+    id: 5,
+    image: 'https://images.unsplash.com/photo-1604187351574-c75ca79f5807?w=800',
+    status: 'Diverifikasi',
+    category: 'Sampah',
+    tags: ['Sampah Organik'],
+    location: 'Payakumbuh',
+    description: 'Sampah organik menumpuk di pasar tradisional, butuh frekuensi angkut lebih sering.',
+    author: 'Siti Aminah',
+    date: '2025-10-21',
+    acted: true,
+  },
+  {
+    id: 6,
+    image: 'https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=800',
+    status: 'Menunggu Verifikasi',
+    category: 'Pembakaran Hutan',
+    tags: ['Asap Tebal'],
+    location: 'Dharmasraya',
+    description: 'Terlihat titik api di pinggir hutan, asap menyebar hingga pemukiman.',
+    author: 'Anton',
+    date: '2025-10-20',
+  },
+  {
+    id: 7,
+    image: 'https://images.unsplash.com/photo-1482192505345-5655af888cc4?w=800',
+    status: 'Menunggu Verifikasi',
+    category: 'Penebangan Hutan',
+    tags: ['Penebangan Ilegal'],
+    location: 'Solok',
+    description: 'Aktivitas penebangan diduga tanpa izin, terlihat banyak bekas gergaji.',
+    author: 'Wina',
+    date: '2025-10-19',
+  },
+  {
+    id: 8,
+    image: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800',
+    status: 'Menunggu Verifikasi',
+    category: 'Kualitas Air',
+    tags: ['Pencemaran Industri'],
+    location: 'Padang Panjang',
+    description: 'Air pembuangan industri mencemari sungai kecil, ada bau dan buih.',
+    author: 'Rizki',
+    date: '2025-10-18',
+  },
+  {
+    id: 9,
+    image: 'https://images.unsplash.com/photo-1496284045406-d3e0b918d9c6?w=800',
+    status: 'Diverifikasi',
+    category: 'Sampah',
+    tags: ['Penumpukan'],
+    location: 'Agam',
+    description: 'Penumpukan sampah di tepi sungai setelah musim hujan, rawan banjir.',
+    author: 'Lina',
+    date: '2025-10-17',
+    acted: true,
+  },
+  {
+    id: 10,
+    image: 'https://images.unsplash.com/photo-1582719478184-7a7d2f9d2d87?w=800',
+    status: 'Menunggu Verifikasi',
+    category: 'Kualitas Air',
+    tags: ['Air Berbau'],
+    location: 'Pasaman',
+    description: 'Sumber mata air berbau minyak, warga khawatir untuk konsumsi.',
+    author: 'Dedi',
+    date: '2025-10-16',
+  },
+  {
+    id: 11,
+    image: 'https://images.unsplash.com/photo-1561484931-3b6c38b0e03b?w=800',
+    status: 'Menunggu Verifikasi',
+    category: 'Lainnya',
+    tags: ['Pencemaran Suara'],
+    location: 'Solok Selatan',
+    description: 'Kegiatan industri menyebabkan polusi suara di malam hari.',
+    author: 'Nora',
+    date: '2025-10-15',
+  },
+  {
+    id: 12,
+    image: 'https://images.unsplash.com/photo-1549880338-65ddcdfd017b?w=800',
+    status: 'Menunggu Verifikasi',
+    category: 'Sampah',
+    tags: ['Sampah Medis'],
+    location: 'Padang',
+    description: 'Ditemukan sampah medis terbuang sembarangan di area publik.',
+    author: 'Fauzan',
+    date: '2025-10-14',
+  },
+];
